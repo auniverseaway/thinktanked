@@ -1,59 +1,58 @@
 <html>
     <head>
         <title>
-            RUM Slicer
+          RUM Slicer
         </title>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/luxon"></script>
         <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon"></script>
+
+        <script src="http://localhost:6456/nx/scripts/nexter.js" type="module"></script>
+        <link rel="stylesheet" href="http://localhost:6456/nx/styles/nexter.css"/>
+
         <script src="./slicer.js" type="module"></script>
         <link rel="stylesheet" href="./rum-slicer.css">
     </head>
     <body>
-        <header>
-        DomainKey:
-        <input type="password" id="domainKey">
-        Domain:
-        <input type="text" id="domain">
-        Filter:
-            <input type="text" id="filter">
-        </header>
+        <header></header>
         <main>
-            <div>
-            <h1><img src="https://www.aem.live/favicon.ico"> www.aem.live</h1>
+          <div>
+            <span>DomainKey: <input type="password" id="domainKey"></span>
+            <span>Domain: <input type="text" id="domain"></span>
+            <span>Filter: <input type="text" id="filter"></span>
+          </div>
+          <div>
+            <h1><img src="https://www.aem.live/favicon.ico">www.aem.live</h1>
             <select id="view">
               <option value="week">Week</option>
               <option value="month">Month</option>
             </select>
-            </div>
-            <div class="key-metrics">
-              <ul>
-                <li id="pageviews">
-                  <h2>Pageviews</h2>
-                  <p>0</p>
-                </li>
-                <li id="visits">
-                  <h2>Visits</h2>
-                  <p>0</p>
-                </li>
-                <li id="conversions">
-                  <h2>Conversions</h2>
-                  <p>0</p>
-                </li>
-                <li id="lcp">
-                  <h2>LCP</h2>
-                  <p>0</p>
-                </li>
-                <li id="cls">
-                  <h2>CLS</h2>
-                  <p>0</p>
-                </li>
-                <li id="inp">
-                  <h2>INP</h2>
-                  <p>0</p>
-                </li>
-            </div>
-    
+            <ul class="key-metrics">
+              <li id="pageviews">
+                <h2>Pageviews</h2>
+                <p>0</p>
+              </li>
+              <li id="visits">
+                <h2>Visits</h2>
+                <p>0</p>
+              </li>
+              <li id="conversions">
+                <h2>Conversions</h2>
+                <p>0</p>
+              </li>
+              <li id="lcp">
+                <h2>LCP</h2>
+                <p>0</p>
+              </li>
+              <li id="cls">
+                <h2>CLS</h2>
+                <p>0</p>
+              </li>
+              <li id="inp">
+                <h2>INP</h2>
+                <p>0</p>
+              </li>
+            </ul>
             <figure>
               <canvas id="time-series"></canvas>
               <figcaption>
@@ -61,36 +60,37 @@
                 <span id="timezone"></span>
               </figcaption>
             </figure>
+            <aside id="facets">
+              <fieldset>
+                  <legend>Events</legend>
+                
+                  <div>
+                    <input type="checkbox" id="top" name="top" checked />
+                    <label for="top">top</label>
+                  </div>
+                
+                  <div>
+                    <input type="checkbox" id="enter" name="enter" />
+                    <label for="enter">enter</label>
+                  </div>
+              </fieldset>
+  
+              <fieldset>
+                  <legend>Target</legend>
+                
+                  <div>
+                    <input type="checkbox" id="target" name="target" checked />
+                    <label for="target">target</label>
+                  </div>
+                
+                  <div>
+                    <input type="checkbox" id="enter" name="enter" />
+                    <label for="horns">enter</label>
+                  </div>
+              </fieldset>
+            </aside>
+          </div>
       </main>
-        <aside id="facets">
-            <fieldset>
-                <legend>Events</legend>
-              
-                <div>
-                  <input type="checkbox" id="top" name="top" checked />
-                  <label for="top">top</label>
-                </div>
-              
-                <div>
-                  <input type="checkbox" id="enter" name="enter" />
-                  <label for="enter">enter</label>
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Target</legend>
-              
-                <div>
-                  <input type="checkbox" id="target" name="target" checked />
-                  <label for="target">target</label>
-                </div>
-              
-                <div>
-                  <input type="checkbox" id="enter" name="enter" />
-                  <label for="horns">enter</label>
-                </div>
-            </fieldset>
-
-        </aside>
+      <footer></footer>
     </body>
 </html>

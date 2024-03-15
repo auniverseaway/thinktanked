@@ -1,3 +1,6 @@
+import { loadArea } from 'http://localhost:6456/nx/scripts/nexter.js';
+loadArea();
+
 // eslint-disable-next-line no-unused-vars, import/no-unresolved
 import { DateTime } from 'https://cdn.jsdelivr.net/npm/luxon@3.4.4/+esm';
 // eslint-disable-next-line import/no-unresolved

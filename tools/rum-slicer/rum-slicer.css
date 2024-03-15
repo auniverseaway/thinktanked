@@ -16,7 +16,7 @@
 
 }
 
-body {
+/* body {
     font-family: Arial, Helvetica, sans-serif;
     max-width: 1200px;
     margin: auto;
@@ -24,9 +24,9 @@ body {
   }
   header {
     display: none;
-  }
+  } */
 
-.key-metrics ul {
+ul.key-metrics {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
