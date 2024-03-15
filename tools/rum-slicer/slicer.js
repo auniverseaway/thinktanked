@@ -1,4 +1,4 @@
-import { loadArea } from 'http://localhost:6456/nx/scripts/nexter.js';
+import { loadArea } from 'https://main--nexter--da-sites.hlx.page/nx/scripts/nexter.js';
 loadArea();
 
 // eslint-disable-next-line no-unused-vars, import/no-unresolved
